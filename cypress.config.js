@@ -7,7 +7,7 @@ module.exports = defineConfig({
 
   // Screenshots
   screenshotOnRunFailure: true, // Automatically capture screenshots on test failure
-  screenshotsFolder: 'cypress/screenshots', // Folder to save screenshots
+  screenshotsFolder: 'cypress/screenshots/screenshot.cy.js', // Folder to save screenshots
 
   // Video recording
   video: true, // Record videos of test runs
