@@ -25,8 +25,13 @@ jobs:
       - name: Install Cypress
         run: npx cypress install
 
-      - name: Run Cypress tests
+      - name: Run Cypress screenshots tests
         run: npx cypress run --spec cypress/e2e/day3/screenshot.cy.js
+        env:
+          CYPRESS_baseUrl: https://opensource-demo.orangehrmlive.com
+
+      - name: Run Cypress videos tests
+        run: npx cypress run --spec cypress/e2e/day3/video.cy.js
         env:
           CYPRESS_baseUrl: https://opensource-demo.orangehrmlive.com
 
@@ -36,8 +41,8 @@ jobs:
           name: cypress-screenshots
           path: cypress/screenshots
 
-      - name: Upload reports
+      - name: Upload Video
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-reports
-          path: cypress/reports
+          name: cypress-videos
+          path: cypress/videos
