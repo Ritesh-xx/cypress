@@ -33,7 +33,7 @@ jobs:
 
       - name: Run Cypress tests (screenshots spec)
         run: npx cypress run --spec cypress/e2e/day3/*
-        env:
+        env: 
           CYPRESS_baseUrl: https://opensource-demo.orangehrmlive.com
 
       - name: Upload screenshots

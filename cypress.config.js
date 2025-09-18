@@ -7,6 +7,7 @@ module.exports = defineConfig({
     // Screenshot & video settings
     screenshotOnRunFailure: true,
     screenshotsFolder: 'cypress/screenshots',
+    
     video: true,
     videoUploadOnPasses: true,
     videosFolder: 'cypress/videos',
